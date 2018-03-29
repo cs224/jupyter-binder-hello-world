@@ -1,0 +1,16 @@
+name: jupyter-binder-hello-world
+channels:
+  - defaults
+dependencies:
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  # https://github.com/conda/conda/issues/2800
+  # https://stackoverflow.com/questions/47887224/anaconda-install-specific-packages-from-specific-channels-using-environment-yml
+  - conda-forge::watermark
+  - pip:
+    - pip==9.0.3
+    #- watermark
