@@ -3,14 +3,14 @@ channels:
   - defaults
 dependencies:
   - pip
-  - numpy
-  - scipy
-  - pandas
-  - matplotlib
-  - seaborn
+  - numpy=1.14.2
+  - scipy=1.0.1
+  - pandas=0.22.0
+  - scikit-learn=0.19.1
+  - matplotlib=2.2.2
+  - seaborn=0.8.1
   # https://github.com/conda/conda/issues/2800
   # https://stackoverflow.com/questions/47887224/anaconda-install-specific-packages-from-specific-channels-using-environment-yml
   - conda-forge::watermark
   - pip:
     - pip==9.0.3
-    #- watermark
