@@ -24,6 +24,13 @@ Test it locally outside of binder:
     conda list -n jupyter-binder-hello-world
     conda env export > environment_.yml
 
+If you want to work with this new environment in a jupyter notebook it is not as easy as I would have wished. You need to install a new kernel in jupyter. More details can be found [here](http://anbasile.github.io/programming/2017/06/25/jupyter-venv/) and [here](https://www.youtube.com/watch?v=jv8gQd4g0Og), but in short it works like this:
+
+    source activate jupyter-binder-hello-world
+    pip install ipykernel
+    ipython kernel install --user --name=jupyter-binder-hello-world
+    jupyter notebook # start the notebook and change the kernel for a given notebook to the newly visible 'jupyter-binder-hello-world'
+
 Pay attention to `.condarc` for the channels it contains:
 
     $ cat ~/.condarc
